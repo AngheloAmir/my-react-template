@@ -1,0 +1,5 @@
+{
+    "data": "I am a data in the sample.json",
+    "desktop_message": "You are at the desktop version",
+    "mobile_message": "You are at the mobile version"
+}
