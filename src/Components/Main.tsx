@@ -1,12 +1,15 @@
 /*
     * TYPE
-        Scene - A screen is a component that occupies a large part of the screen
-        Index - A component that does not display itself
-        Fragment of ...
+        Fragment of App.tsx
 
     * DESCRIPTION
-
+         Handles what will be shown, the desktop or mobile version and handles the process for both Views.
+   
     * VISIBLE WHEN
+    
+    * NOTE
+      Files in the Components folder should provide only the process (i.e what happen when a button is pressed), therefore the file
+      itself should not contain html tags.
 */
 import React from 'react';
 
@@ -26,13 +29,13 @@ export default function MainView() {
     }
 
     return (
-        <div>
+        <React.Fragment>
             {
                 width >= 578 ?
                     <MainDesktop onClick={handleOnClick} />
                 :
                     <MainMobile onClick={handleOnClick} />
             }
-        </div>
+        </React.Fragment>
     )
 }
