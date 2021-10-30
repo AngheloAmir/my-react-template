@@ -1,0 +1,40 @@
+/*
+*/
+@import './_';
+
+$containerWidth:        100vw;
+$containerHeight:       100vh;
+$sidebarwidth:          200px;
+
+#Home {
+    display:            flex;
+    flex-direction:     row;
+    height:             $containerHeight;
+    width:              $containerWidth;
+
+    .sidebar {
+        background-color: rosybrown;
+        display:            none;
+        height:             $containerHeight;
+        width:              $sidebarwidth;
+
+        @include tabletscreen {
+            display: block;
+        }
+    }
+
+    .content {
+        background-color:   wheat;
+        display:             flex;
+        flex-direction:      column;
+
+        @include tabletscreen {
+            width: calc(100% - $sidebarwidth);
+        }
+        
+        .navbar {
+            background-color: salmon;
+            height:             3em;
+        }
+    }
+}
